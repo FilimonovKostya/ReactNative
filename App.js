@@ -1,33 +1,42 @@
-import {FlatList, StatusBar, StyleSheet, Text, View} from 'react-native';
-
-const array = new Array(100).fill(null).map((el, index) => ({
-    id: index + 1,
-    title: `lesson react native ${index + 1}`
-}))
+import { StatusBar, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.heading}>
+        <Text style={styles.text}> Hello Daniel </Text>
+        <Text style={styles.subtitle}>
+          Welcome to ode to the things, Let us open executive life together
+        </Text>
+      </View>
 
-    const render = ({item, index, separators}) => {
-        return (
-            <View><Text>{item.title}</Text></View>
-        )
-    }
+      <View>
 
-    return (
-        <View style={styles.container}>
-            <FlatList data={array} renderItem={render}/>
-            <StatusBar />
-        </View>
+      </View>
 
-    );
+      <StatusBar barStyle={"dark-content"} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#7cbe77',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+  container: {
+    flex: 1,
+    backgroundColor: "#f6f8f8",
+    padding: 10,
+  },
+  heading: {
+    marginTop: 40,
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#000000",
+  },
+  subtitle: {
+    marginTop: 20,
+    fontWeight: "100",
+    maxWidth: 325,
+    width: "100%",
+  },
 });
-
