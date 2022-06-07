@@ -1,25 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={text}>Hello React Native</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <View style={{width: 300, height: 300, backgroundColor: '#e1d8d8'}}>
+
+                <TouchableOpacity>
+                    <View><Text>TouchableOpacity</Text></View>
+                </TouchableOpacity>
+
+            </View>
+            <StatusBar style={'inverted'}/>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#c400bc',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
 
-const text = StyleSheet.create({
-  color:'red',
-})
