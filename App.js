@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { StatusBar, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function App() {
   return (
@@ -10,7 +10,9 @@ export default function App() {
         </Text>
       </View>
 
-      <View>
+      <TextInput style={styles.input} placeholder={'Search'}/>
+
+      <View style={styles.tabs}>
 
       </View>
 
@@ -39,4 +41,18 @@ const styles = StyleSheet.create({
     maxWidth: 325,
     width: "100%",
   },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: '#f1efef',
+    borderColor: 'transparent',
+    color:'black',
+  },
+  tabs:{
+    marginTop:30,
+
+  }
 });
