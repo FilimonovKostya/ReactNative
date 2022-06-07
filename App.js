@@ -1,24 +1,31 @@
-import {StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, StatusBar, StyleSheet, Text, View} from 'react-native';
+
+const array = new Array(100).fill(null).map((el, index) => ({
+    id: index + 1,
+    title: `lesson react native ${index + 1}`
+}))
 
 export default function App() {
+
+    const render = ({item, index, separators}) => {
+        return (
+            <View><Text>{item.title}</Text></View>
+        )
+    }
+
     return (
         <View style={styles.container}>
-            <View style={{width: 300, height: 300, backgroundColor: '#e1d8d8'}}>
-
-                <TouchableOpacity>
-                    <View><Text>TouchableOpacity</Text></View>
-                </TouchableOpacity>
-
-            </View>
-            <StatusBar style={'inverted'}/>
+            <FlatList data={array} renderItem={render}/>
+            <StatusBar />
         </View>
+
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#c400bc',
+        backgroundColor: '#7cbe77',
         alignItems: 'center',
         justifyContent: 'center',
     },
