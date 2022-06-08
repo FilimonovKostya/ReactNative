@@ -60,7 +60,6 @@ const women = [
   },
 ];
 
-
 const renderItems = ({ item }) => (
   <Text style={{ marginHorizontal: 5, fontSize: 18 }}>{item}</Text>
 );
@@ -86,7 +85,7 @@ const renderWomen = ({ item }) => (
     }}
   >
     <Image
-      style={{ width: 70, height: 70, borderRadius: "50%" }}
+      style={{ width: 70, height: 70, borderRadius: 35 }}
       source={item.img}
     />
   </View>
